@@ -18,15 +18,17 @@ public class LogicDB {
         String url = "jdbc:postgresql://baasu.db.elephantsql.com:5432/rkdueovd";
         String username = "rkdueovd";
         String password = "SvqYboQsD6JGUT4oNtc3SpCLqTencJJj";
+        System.out.println("Name\t\tNickName\tEmail");
 
         try {
             Connection db = DriverManager.getConnection(url, username, password);
             Statement st = db.createStatement();
             ResultSet rs = st.executeQuery("select * from Players");
             while (rs.next()) {
-
-                System.out.print(rs.getString(1) + " ");
-                System.out.println(rs.getString(2) + " ");
+                
+                System.out.print(rs.getString(1) + " | ");
+                System.out.print(rs.getString(2) + " | ");
+                System.out.print(rs.getString(3) + "\n");
             }
             rs.close();
             st.close();
