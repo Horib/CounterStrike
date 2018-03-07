@@ -6,7 +6,7 @@ import java.sql.*;
 	Run with:
 	java -cp postgresql-42.2.1.jar:. DBTest
  */
-public class LogicFacade {
+public class LogicDB {
 
     public static void main(String[] args) {
         try {
@@ -21,8 +21,6 @@ public class LogicFacade {
 
         try {
             Connection db = DriverManager.getConnection(url, username, password);
-            System.out.println("Name\tUsername\tEmail");
-
             Statement st = db.createStatement();
             ResultSet rs = st.executeQuery("select * from Players");
             while (rs.next()) {
