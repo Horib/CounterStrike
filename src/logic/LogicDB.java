@@ -15,20 +15,28 @@ public class LogicDB {
             System.out.println(e);
         }
 
-        String url = "jdbc:postgresql://baasu.db.elephantsql.com:5432/rkdueovd";
-        String username = "rkdueovd";
-        String password = "SvqYboQsD6JGUT4oNtc3SpCLqTencJJj";
-        System.out.println("Name\t\tNickName\tEmail");
+        String url = "jdbc:postgresql://baasu.db.elephantsql.com:5432/fcshwhrh";
+        String username = "fcshwhrh";
+        String password = "-sV1CsXjIa1RYzk7Z6yUxEgsdohJiLoa";
+        System.out.println("playerName\t\tEmail\tNickName\tTeamName\tCountry\tCoach\tTourName\tyear\tPrize\tParticipatingTeams\tWinner");
 
         try {
             Connection db = DriverManager.getConnection(url, username, password);
             Statement st = db.createStatement();
-            ResultSet rs = st.executeQuery("select * from Players");
+            ResultSet rs = st.executeQuery("select * from players, team, tournement");
             while (rs.next()) {
                 
                 System.out.print(rs.getString(1) + " | ");
                 System.out.print(rs.getString(2) + " | ");
-                System.out.print(rs.getString(3) + "\n");
+                System.out.print(rs.getString(3) + " | ");
+                System.out.print(rs.getString(4) + " | ");
+                System.out.print(rs.getString(5) + " | ");
+                System.out.print(rs.getString(6) + " | ");
+                System.out.print(rs.getString(7) + " | ");
+                System.out.print(rs.getString(8) + " | ");
+                System.out.print(rs.getString(9) + " | ");
+                System.out.print(rs.getString(10) + " | ");
+                System.out.print(rs.getString(11) + " \n ");
             }
             rs.close();
             st.close();
