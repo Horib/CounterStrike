@@ -23,9 +23,9 @@ public class Injection {
         System.out.println("Enter Password");
         String password = keyboard.nextLine();
 
-        String dburl = "jdbc:postgresql://stampy.db.elephantsql.com:5432/wagjypme";
-        String dbusername = "wagjypme";
-        String dbpassword = "ATuX8p5Hgv80bzqG4sNx19EoEP5p56cQ";
+        String dburl = "jdbc:postgresql://baasu.db.elephantsql.com:5432/rkdueovd";
+        String dbusername = "rkdueovd";
+        String dbpassword = "SvqYboQsD6JGUT4oNtc3SpCLqTencJJj";
 
         try {
             Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
