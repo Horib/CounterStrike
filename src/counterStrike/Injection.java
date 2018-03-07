@@ -1,4 +1,4 @@
-package jdbc;
+package counterStrike;
 
 import java.sql.*;
 import java.util.Scanner;
