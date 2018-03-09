@@ -6,8 +6,8 @@ import java.sql.*;
 public class WinningPlayersAndCoaches {
     
     public static void WinsPlayersAndCoaches(){
-    
-    try {
+
+            try {
             Class.forName("org.postgresql.Driver");
         } catch (java.lang.ClassNotFoundException e) {
             System.out.println(e);
