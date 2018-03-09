@@ -1,6 +1,7 @@
 package logic;
 
 import java.sql.*;
+import java.util.Scanner;
 
 /*
 	Run with:
@@ -9,7 +10,7 @@ import java.sql.*;
 public class LogicDB {
 
     public static void main(String[] args) {
-        
+
         try {
             Class.forName("org.postgresql.Driver");
         } catch (java.lang.ClassNotFoundException e) {
@@ -26,9 +27,7 @@ public class LogicDB {
             Statement st = db.createStatement();
             
             ResultSet rs1 = st.executeQuery("select distinct team.email from team inner join tournement on team.tname = tournement.winner");
-            
-            
-           
+
             while (rs1.next()) {
                 
                 //System.out.print(rs1.getString(1) + "//");
