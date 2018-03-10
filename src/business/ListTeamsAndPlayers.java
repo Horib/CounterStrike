@@ -4,19 +4,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.Scanner;
 
-//Exercise d
+/**
+ *
+ * @author gruppe 3
+ */
 
-public class ListLimiter {
+//Exercise c
 
-    public static void ListLimiter() {
+public class ListTeamsAndPlayers {
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Input an Int:");
-        int listLimeter = scanner.nextInt();
-
+    public static void ListTeamsAndPlayers() {
 
         try {
             Class.forName("org.postgresql.Driver");
@@ -32,8 +30,8 @@ public class ListLimiter {
             Connection db = DriverManager.getConnection(url, username, password);
             Statement st = db.createStatement();
 
-            ResultSet rs1 = st.executeQuery("SELECT tournement.participants FROM tournement WHERE tournement.participants IN " +
-                    "(SELECT tournement.participants FROM tournement GROUP BY tournement.participants HAVING COUNT (tournement.participants) >= " + listLimeter + ");");
+            ResultSet rs1 = st.executeQuery("");
+
 
             while (rs1.next()) {
 
@@ -51,8 +49,7 @@ public class ListLimiter {
             System.out.println(e);
         }
 
-
     }
+
+
 }
-
-

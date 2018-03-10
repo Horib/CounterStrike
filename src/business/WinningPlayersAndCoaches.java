@@ -1,13 +1,14 @@
 package business;
+
 import java.sql.*;
 
-
+//Exercise b
 
 public class WinningPlayersAndCoaches {
-    
-    public static void WinsPlayersAndCoaches(){
 
-            try {
+    public static void WinsPlayersAndCoaches() {
+
+        try {
             Class.forName("org.postgresql.Driver");
         } catch (java.lang.ClassNotFoundException e) {
             System.out.println(e);
@@ -21,18 +22,16 @@ public class WinningPlayersAndCoaches {
         try {
             Connection db = DriverManager.getConnection(url, username, password);
             Statement st = db.createStatement();
-            
+
             ResultSet rs1 = st.executeQuery("select distinct team.email from team inner join tournement on team.tname = tournement.winner");
-            
-            
-            
-           
+
+
             while (rs1.next()) {
-                
+
                 //System.out.print(rs1.getString(1) + "//");
                 //System.out.print(rs1.getString(2) + "//");
                 System.out.print(rs1.getString(1) + "\n");
-            
+
 
             }
             rs1.close();
@@ -42,8 +41,8 @@ public class WinningPlayersAndCoaches {
         } catch (Exception e) {
             System.out.println(e);
         }
-    
+
     }
-    
+
 
 }
