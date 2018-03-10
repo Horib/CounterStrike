@@ -11,12 +11,14 @@ import business.WinningPlayersAndCoaches;
 public class Starter {
 
     public static void main(String[] args) {
+        
         System.out.println("All player and coaches: ");
         NamesCoachesAndPlayers.playerAndCoachNames();
-
+        
+        //Exercise b)
         System.out.println("\nWinning players and coaches: ");
         WinningPlayersAndCoaches.WinsPlayersAndCoaches();
-
+        
     }
 
 }
