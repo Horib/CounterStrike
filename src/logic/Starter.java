@@ -16,6 +16,7 @@ public class Starter {
         
         System.out.println("All player and coaches: ");
         NamesCoachesAndPlayers.playerAndCoachNames();
+        //todo add into excercise a and add team neame to the list
 
         //Exercise a
         System.out.println("\nList of all names of coaches and the team they belong to:");
