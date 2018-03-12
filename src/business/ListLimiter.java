@@ -32,8 +32,7 @@ public class ListLimiter {
             Connection db = DriverManager.getConnection(url, username, password);
             Statement st = db.createStatement();
 
-            ResultSet rs1 = st.executeQuery("SELECT tournement.participants FROM tournement WHERE tournement.participants IN " +
-                    "(SELECT tournement.participants FROM tournement GROUP BY tournement.participants HAVING COUNT (tournement.participants) >= " + listLimeter + ");");
+            ResultSet rs1 = st.executeQuery("SELECT tournement.participants FROM tournement GROUP BY tournement.participants HAVING COUNT (tournement.participants) >= " + listLimeter + ";");
 
             while (rs1.next()) {
 
