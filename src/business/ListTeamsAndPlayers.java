@@ -30,7 +30,7 @@ public class ListTeamsAndPlayers {
             Connection db = DriverManager.getConnection(url, username, password);
             Statement st = db.createStatement();
 
-            ResultSet rs1 = st.executeQuery("");
+            ResultSet rs1 = st.executeQuery("Select count (email) (Select distinct tname, email from team) Where tname = 'N1 --> Nx'");
 
 
             while (rs1.next()) {

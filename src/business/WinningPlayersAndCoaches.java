@@ -28,8 +28,9 @@ public class WinningPlayersAndCoaches {
             Connection db = DriverManager.getConnection(url, username, password);
             Statement st = db.createStatement();
 
-            ResultSet rs1 = st.executeQuery("select distinct team.email from team inner join tournement on team.tname = tournement.winner");
-
+            //ResultSet rs1 = st.executeQuery("select distinct team.email from team inner join tournement on team.tname = tournement.winner");
+            ResultSet rs1 = st.executeQuery("Declare @Myvar varchar(200)SET @Myvar distinct team.email from team inner join tournement on team.tname = tournement.winner; Select players.names, coaches.names \n" +
+                    "From ((@Myvar inner join coaches on coaches.email = @Myvar) Inner join players on players.email = @Myvar);");
 
             while (rs1.next()) {
 
