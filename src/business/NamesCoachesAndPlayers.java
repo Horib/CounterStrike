@@ -4,7 +4,7 @@ public class NamesCoachesAndPlayers {
     
     
         
-public static void playerAndCoachNames(){
+public static void NamesCoachesAndPlayers(){
         
         try {
             Class.forName("org.postgresql.Driver");
@@ -21,7 +21,7 @@ public static void playerAndCoachNames(){
             Connection db = DriverManager.getConnection(url, username, password);
             Statement st = db.createStatement();
             
-            ResultSet rs1 = st.executeQuery("select pname from players union select cname from coaches");
+            ResultSet rs1 = st.executeQuery("select distinct tname, cname, pname from team, players, coaches where team.email = players.email ");
             
             
             

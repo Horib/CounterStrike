@@ -16,14 +16,9 @@ public class Starter {
 
         // Remove comments for the exercise you want to run.
 
-        //System.out.println("All player and coaches: ");
-        //NamesCoachesAndPlayers.playerAndCoachNames();
-        //todo add into excercise a and add team neame to the list
-
         //Exercise A
-        //System.out.println("\nList of all names of coaches and the team they belong to:");
-        //System.out.println("Not done yet...");
-        //todo not done yet
+        System.out.println("\nList of all names of coaches and the team they belong to:");
+        NamesCoachesAndPlayers.NamesCoachesAndPlayers();
 
         //Exercise B
         //System.out.println("\nWinning players and coaches: ");
@@ -35,8 +30,8 @@ public class Starter {
         //todo needs the proper syntax
 
         //Exercise D
-        System.out.println("\nList of all tournaments with at least x Teams attending:");
-        ListLimiter.ListLimiter();
+        //System.out.println("\nList of all tournaments with at least x Teams attending:");
+        //ListLimiter.ListLimiter();
 
     }
 
