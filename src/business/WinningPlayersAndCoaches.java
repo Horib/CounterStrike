@@ -2,7 +2,12 @@ package business;
 
 import java.sql.*;
 
-//Exercise b
+/**
+ *
+ * @author gruppe 3
+ */
+
+//Exercise B
 
 public class WinningPlayersAndCoaches {
 

@@ -1,9 +1,14 @@
 package business;
 import java.sql.*;
 public class NamesCoachesAndPlayers {
-    
-    
-        
+
+    /**
+     *
+     * @author gruppe 3
+     */
+
+    //Exercise A
+
 public static void NamesCoachesAndPlayers(){
         
         try {
@@ -28,9 +33,9 @@ public static void NamesCoachesAndPlayers(){
            
             while (rs1.next()) {
                 
-                //System.out.print(rs1.getString(1) + "//");
-                //System.out.print(rs1.getString(2) + "//");
-                System.out.print(rs1.getString(1) + "\n");
+                System.out.print(rs1.getString(1) + " (Team) //");
+                System.out.print(rs1.getString(2) + " (Coach) //");
+                System.out.print(rs1.getString(3) + " (Player) \n");
             
 
             }

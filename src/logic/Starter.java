@@ -5,11 +5,16 @@ import business.ListTeamsAndPlayers;
 import business.NamesCoachesAndPlayers;
 import business.WinningPlayersAndCoaches;
 
+/**
+ *
+ * @author gruppe 3
+ */
 
 /*
 	Run with:
 	java -cp postgresql-42.2.1.jar:. DBTest
  */
+
 public class Starter {
 
     public static void main(String[] args) {

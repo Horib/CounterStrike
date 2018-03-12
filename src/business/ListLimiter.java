@@ -6,7 +6,12 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
-//Exercise d
+/**
+ *
+ * @author gruppe 3
+ */
+
+//Exercise D
 
 public class ListLimiter {
 

@@ -10,7 +10,7 @@ import java.sql.Statement;
  * @author gruppe 3
  */
 
-//Exercise c
+//Exercise C
 
 public class ListTeamsAndPlayers {
 
